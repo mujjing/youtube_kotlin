@@ -1,6 +1,9 @@
 package co.jh.popupsample;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
@@ -20,13 +23,17 @@ public class Pop extends Activity {
 
         int width = dm.widthPixels;
         int height = dm.heightPixels;
-        getWindow().setLayout((int)(width*.7), (int)(height*.55));
+        getWindow().setLayout((int)(width*.75), (int)(height*.55));
 
         Button b = (Button) findViewById(R.id.close_btn);
 
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SharedPreferences pref = Pop.this.getSharedPreferences("my_settings", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = pref.edit();
+                editor.putString("stringValue", "팝업이유");
+                editor.commit();
                 Pop.this.finish();
             }
         });
