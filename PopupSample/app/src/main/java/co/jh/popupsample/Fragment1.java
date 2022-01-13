@@ -45,7 +45,9 @@ public class Fragment1 extends Fragment {
         binding.showPopup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), Pop.class));
+
+                //startActivity(new Intent(getActivity(), Pop.class));
+                startActivity(new Intent(getActivity(), BannerViewActivity.class));
             }
         });
 

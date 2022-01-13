@@ -44,27 +44,33 @@
         android:layout_width="300dp"
         android:layout_height="70dp"
         android:layout_gravity="bottom|center_horizontal"
-        android:background="#FFEB3B">
-        <Button
-            android:id="@+id/close_banner_btn"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="5dp"
-            android:text="x"
-            android:textColor="@color/white"
-            android:textSize="10dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintRight_toRightOf="parent"/>
+        android:background="#FFFFFF">
 
-            <TextView
-                android:id="@+id/banner_text"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="banner"
-                android:textSize="30dp"
-                android:textColor="@color/black"
-                android:gravity="center"/>
+                android:scaleType="fitXY"
+                android:src="@drawable/nicos"/>
+
+
+            <ImageView
+                android:id="@+id/close_banner_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginRight="1dp"
+                android:src="@drawable/ic_baseline_cancel_24"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
